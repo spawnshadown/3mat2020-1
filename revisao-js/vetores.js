@@ -57,3 +57,48 @@ frutas.splice(5, 1, 'abacate')
 
 console.log(frutas)
 
+//  Percursos de vetor
+
+// 1) percurso via for tradicional
+// É o mais flexivel, permitindo o percurso parcial(pode começar
+// em um elemento que nao seja o primeiro e terminar que seja o ultimo)
+
+for(let i = 0; i < frutas.length; i++){
+console.log(i, frutas[i])
+
+}
+console.log('------------------------------')
+// 2) Percuso via for tradicional, em ordem inversa
+
+for (let i = frutas.length -1; i >= 0; i--  ){
+
+    console.log(i, frutas[i])
+
+}
+console.log('------------------------------------------')
+// 3) Percuso usando for ..of
+// Percorre totalmente um vetor, sem necessidade de manter uma variavel
+// contadora
+// Variaveis:
+// fruta -> nome da variavel que recebera cada elemento (pode ser qualquer nome valido de variavel)
+// futas -> o nome do vetor que esta sendo percorrido
+
+for(let fruta of frutas){
+    console.log(fruta)
+
+}
+console.log('------------------------------------------')
+// 4) Percurso utilizado forEach()
+// forEach() recebe como argumento uma funçao cujo argumento
+// é cada um dos elementos do vetor percorrido
+// O nome do parametro da funçao passada pode ser qualquer nome valido
+// de identificador
+frutas.forEach(function(elemento){
+    console.log(elemento)
+
+})
+console.log('------------------------------------------')
+
+// forEach utilizando arrow function como parametro
+
+frutas.forEach(elemento => console.log(elemento))
